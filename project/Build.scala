@@ -10,7 +10,11 @@ object ApplicationBuild extends Build {
   val appDependencies = Seq(
     // Add your project dependencies here,
     jdbc,
-    anorm
+//    anorm
+    "com.github.seratch" %% "scalikejdbc" % "[1.4,)",
+    "com.github.seratch" %% "scalikejdbc-play-plugin" % "[1.4,)",
+    "com.github.seratch" %% "scalikejdbc-interpolation" % "[1.4,)",
+    "org.slf4j" % "slf4j-simple" % "[1.7,)"
   )
 
 

@@ -1,7 +1,10 @@
 @(message: String)
+@import helper.twitterBootstrap._
 
 @main("Welcome to Play 2.1") {
-    
-    @play20.welcome(message)
-    
+
+        @{models.User.findByEmail("test@example.com")}
+
+        <h1>Hello Play!</h1>
+
 }
