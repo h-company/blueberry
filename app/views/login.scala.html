@@ -1,5 +1,5 @@
 @(form: Application.LoginForm)
-@import helper.twitterBootstrap._
+@import views.BootstrapHelper._
 
 @main("Login") {
 
@@ -7,10 +7,12 @@
     <p class="error">@error.message</p>
   }
 
-  @helper.form(action = routes.Application.authenticate) {
+  @helper.form(action = routes.Application.authenticate, 'class -> "form-horizontal") {
     @helper.inputText(form("email"))
     @helper.inputPassword(form("password"))
-    <button type="submit">submit</button>
+    <div class="form-actions">
+      <button class="btn btn-primary" type="submit">Login</button>
+    </div>
   }
 
 }
