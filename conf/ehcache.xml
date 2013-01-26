@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ehcache>
+    <diskStore path="./ehcache.dat"/>
+    <defaultCache
+            diskPersistent="true"
+            maxEntriesLocalHeap="1000"
+            />
+</ehcache>

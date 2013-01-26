@@ -1,10 +1,8 @@
-@(message: String)
-@import helper.twitterBootstrap._
+@(name: String)
 
 @main("Welcome to Play 2.1") {
 
-        @{models.User.findByEmail("test@example.com")}
+   <h1>Hello @name</h1>
 
-        <h1>Hello Play!</h1>
-
+   <p><a href="@routes.Application.logout">logout</a></p>
 }

@@ -1,0 +1,16 @@
+@(form: Application.LoginForm)
+@import helper.twitterBootstrap._
+
+@main("Login") {
+
+  @form.globalError.map { error =>
+    <p class="error">@error.message</p>
+  }
+
+  @helper.form(action = routes.Application.authenticate) {
+    @helper.inputText(form("email"))
+    @helper.inputPassword(form("password"))
+    <button type="submit">submit</button>
+  }
+
+}
