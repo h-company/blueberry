@@ -4,14 +4,14 @@
 @main("Login") {
 
   @form.globalError.map { error =>
-    <p class="error">@error.message</p>
+    <p class="alert alert-error">@error.message</p>
   }
 
   @helper.form(action = routes.Application.authenticate, 'class -> "form-horizontal") {
     @helper.inputText(form("email"))
     @helper.inputPassword(form("password"))
     <div class="form-actions">
-      <button class="btn btn-primary" type="submit">Login</button>
+      <button class="btn btn-primary btn-large" type="submit">Login</button>
     </div>
   }
 
